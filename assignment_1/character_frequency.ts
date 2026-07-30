@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let text = prompt("Enter a string: ");
+let text = "programming";
 let frequency: { [key: string]: number } = {};
 
 for (let i = 0; i < text.length; i++) {

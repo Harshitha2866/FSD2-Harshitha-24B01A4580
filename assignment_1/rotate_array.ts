@@ -1,15 +1,7 @@
-import promptSync from "prompt-sync";
+let numbers: number[] = [10, 20, 30, 40, 50];
+let size = numbers.length;
 
-const prompt = promptSync();
-
-let size = Number(prompt("Enter the number of elements: "));
-let numbers: number[] = [];
-
-for (let i = 0; i < size; i++) {
-    numbers[i] = Number(prompt("Enter element " + (i + 1) + ": "));
-}
-
-let positions = Number(prompt("Enter the number of positions to rotate: "));
+let positions = 2;
 
 // Handle cases where positions are greater than the array size
 positions = positions % size;
@@ -18,3 +10,4 @@ positions = positions % size;
 let rotatedArray = [...numbers.slice(positions), ...numbers.slice(0, positions)];
 
 console.log("Rotated Array =", rotatedArray);
+export{}

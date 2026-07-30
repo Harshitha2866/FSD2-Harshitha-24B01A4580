@@ -1,7 +1,3 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
 class Student {
     name: string;
     rollNumber: number;
@@ -23,10 +19,7 @@ class Student {
     }
 }
 
-let name = prompt("Enter student name: ");
-let rollNumber = Number(prompt("Enter roll number: "));
-let course = prompt("Enter course: ");
-
-let student = new Student(name, rollNumber, course);
+let student = new Student("Harshitha", 101, "AI & Data Science");
 
 student.displayDetails();
+export{}

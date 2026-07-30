@@ -1,7 +1,3 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
 class BankAccount {
     accountHolder: string;
     balance: number;
@@ -34,15 +30,9 @@ class BankAccount {
     }
 }
 
-let accountHolder = prompt("Enter account holder name: ");
-let balance = Number(prompt("Enter initial balance: "));
+let account = new BankAccount("Harshitha", 10000);
 
-let account = new BankAccount(accountHolder, balance);
-
-let depositAmount = Number(prompt("Enter amount to deposit: "));
-account.deposit(depositAmount);
-
-let withdrawAmount = Number(prompt("Enter amount to withdraw: "));
-account.withdraw(withdrawAmount);
+account.deposit(2000);
+account.withdraw(1500);
 
 account.displayBalance();

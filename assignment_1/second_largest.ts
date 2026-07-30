@@ -1,13 +1,5 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let size = Number(prompt("Enter the number of elements: "));
-let numbers: number[] = [];
-
-for (let i = 0; i < size; i++) {
-    numbers[i] = Number(prompt("Enter element " + (i + 1) + ": "));
-}
+let numbers: number[] = [25, 10, 45, 30, 15];
+let size = numbers.length;
 
 let largest = numbers[0];
 let secondLargest = numbers[0];
@@ -27,3 +19,4 @@ for (let i = 0; i < size; i++) {
 }
 
 console.log("Second Largest Number =", secondLargest);
+export{}

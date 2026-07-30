@@ -1,13 +1,5 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let size = Number(prompt("Enter the number of elements: "));
-let numbers: number[] = [];
-
-for (let i = 0; i < size; i++) {
-    numbers[i] = Number(prompt("Enter element " + (i + 1) + ": "));
-}
+let numbers: number[] = [1, 2, 3, 5];
+let size = numbers.length;
 
 // Calculate the expected sum of numbers from 1 to size + 1
 let expectedSum = ((size + 1) * (size + 2)) / 2;
@@ -22,3 +14,4 @@ for (let i = 0; i < size; i++) {
 let missingNumber = expectedSum - actualSum;
 
 console.log("Missing Number =", missingNumber);
+export{}

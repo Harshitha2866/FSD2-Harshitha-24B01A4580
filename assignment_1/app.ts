@@ -1,11 +1,9 @@
-import promptSync from "prompt-sync";
 import { add, subtract, multiply, divide } from "./math.js";
 
-const prompt = promptSync();
+let firstNumber = 10;
+let secondNumber = 5;
 
-let firstNumber = Number(prompt("Enter the first number: "));
-let secondNumber = Number(prompt("Enter the second number: "));
-
+// Perform arithmetic operations
 console.log("Addition =", add(firstNumber, secondNumber));
 console.log("Subtraction =", subtract(firstNumber, secondNumber));
 console.log("Multiplication =", multiply(firstNumber, secondNumber));

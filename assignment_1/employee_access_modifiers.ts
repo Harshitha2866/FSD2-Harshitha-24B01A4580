@@ -1,7 +1,3 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
 class Employee {
     public name: string;
     private salary: number;
@@ -30,11 +26,7 @@ class Manager extends Employee {
     }
 }
 
-let name = prompt("Enter employee name: ");
-let salary = Number(prompt("Enter salary: "));
-let department = prompt("Enter department: ");
-
-let manager = new Manager(name, salary, department);
+let manager = new Manager("Harshitha", 50000, "IT");
 
 manager.displayEmployee();
 manager.displayDepartment();

@@ -1,9 +1,5 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let start = Number(prompt("Enter the starting number: "));
-let end = Number(prompt("Enter the ending number: "));
+let start = 10;
+let end = 50;
 
 let primes = "";
 

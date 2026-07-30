@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let text = prompt("Enter a string: ");
+let text = "programming";
 let result = "";
 
 // Check each character in the string
@@ -16,3 +12,4 @@ for (let i = 0; i < text.length; i++) {
 }
 
 console.log("String after removing duplicates:", result);
+export{}

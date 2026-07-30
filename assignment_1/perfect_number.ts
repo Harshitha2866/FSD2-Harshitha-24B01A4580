@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let number = Number(prompt("Enter a number: "));
+let number = 28;
 let sum = 0;
 
 // Find the sum of all factors except the number itself
@@ -17,3 +13,4 @@ if (sum === number) {
 } else {
     console.log("Not a Perfect Number");
 }
+export{}

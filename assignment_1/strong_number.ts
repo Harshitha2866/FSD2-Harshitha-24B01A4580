@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let number = Number(prompt("Enter a number: "));
+let number = 145;
 let copy = number;
 let total = 0;
 
@@ -26,3 +22,4 @@ if (total === number) {
 } else {
     console.log("Not a Strong Number");
 }
+export{}

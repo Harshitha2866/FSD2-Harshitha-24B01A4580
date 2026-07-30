@@ -1,14 +1,6 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let size = Number(prompt("Enter the number of elements: "));
-let numbers: number[] = [];
+let numbers: number[] = [10, 20, 30, 20, 40, 10];
+let size = numbers.length;
 let duplicateFound = false;
-
-for (let i = 0; i < size; i++) {
-    numbers[i] = Number(prompt("Enter element " + (i + 1) + ": "));
-}
 
 console.log("Duplicate Elements:");
 

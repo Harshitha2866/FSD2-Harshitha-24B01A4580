@@ -1,7 +1,3 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
 class Box<T> {
     value: T;
 
@@ -14,11 +10,8 @@ class Box<T> {
     }
 }
 
-let numberValue = Number(prompt("Enter a number: "));
-let stringValue = prompt("Enter a string: ");
-
-let numberBox = new Box<number>(numberValue);
-let stringBox = new Box<string>(stringValue);
+let numberBox = new Box<number>(100);
+let stringBox = new Box<string>("Hello");
 
 console.log("\nNumber Box");
 numberBox.display();

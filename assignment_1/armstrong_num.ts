@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let number = Number(prompt("Enter a number: "));
+let number = 153;
 let copy = number;
 let result = 0;
 

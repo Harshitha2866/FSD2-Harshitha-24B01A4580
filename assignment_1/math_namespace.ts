@@ -1,7 +1,3 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
 namespace MathOperations {
 
     // Add two numbers
@@ -29,10 +25,11 @@ namespace MathOperations {
     }
 }
 
-let firstNumber = Number(prompt("Enter the first number: "));
-let secondNumber = Number(prompt("Enter the second number: "));
+let firstNumber = 20;
+let secondNumber = 5;
 
 console.log("Addition =", MathOperations.add(firstNumber, secondNumber));
 console.log("Subtraction =", MathOperations.subtract(firstNumber, secondNumber));
 console.log("Multiplication =", MathOperations.multiply(firstNumber, secondNumber));
 console.log("Division =", MathOperations.divide(firstNumber, secondNumber));
+export{}

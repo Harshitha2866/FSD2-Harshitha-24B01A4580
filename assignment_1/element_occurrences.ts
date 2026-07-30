@@ -1,14 +1,6 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let size = Number(prompt("Enter the number of elements: "));
-let numbers: number[] = [];
+let numbers: number[] = [10, 20, 10, 30, 20, 10];
+let size = numbers.length;
 let count: { [key: number]: number } = {};
-
-for (let i = 0; i < size; i++) {
-    numbers[i] = Number(prompt("Enter element " + (i + 1) + ": "));
-}
 
 // Count the occurrences of each element
 for (let i = 0; i < size; i++) {
@@ -25,3 +17,4 @@ console.log("Occurrences of each element:");
 for (let key in count) {
     console.log(key + " : " + count[key]);
 }
+export{}

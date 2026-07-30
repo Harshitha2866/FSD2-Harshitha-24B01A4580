@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let number = Number(prompt("Enter a number: "));
+let number = 12345;
 let copy = number;
 let total = 0;
 
@@ -15,3 +11,4 @@ while (copy > 0) {
 }
 
 console.log("Sum of Digits =", total);
+export{}

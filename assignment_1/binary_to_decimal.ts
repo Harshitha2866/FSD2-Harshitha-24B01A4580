@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let binary = prompt("Enter a binary number: ");
+let binary = "1010";
 let decimal = 0;
 let power = 0;
 
@@ -15,3 +11,4 @@ for (let i = binary.length - 1; i >= 0; i--) {
 }
 
 console.log("Decimal Number =", decimal);
+export{}

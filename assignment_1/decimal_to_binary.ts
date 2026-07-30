@@ -1,8 +1,4 @@
-import promptSync from "prompt-sync";
-
-const prompt = promptSync();
-
-let decimal = Number(prompt("Enter a decimal number: "));
+let decimal = 25;
 let binary = "";
 
 if (decimal === 0) {
