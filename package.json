@@ -1,10 +1,29 @@
 {
   "type": "module",
   "dependencies": {
+    "express": "^5.2.1",
     "prompt-sync": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^26.1.2",
     "@types/prompt-sync": "^4.2.3"
-  }
+  },
+  "name": "4580_fsd-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshitha2866/FSD2-Harshitha-24B01A4580.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harshitha2866/FSD2-Harshitha-24B01A4580/issues"
+  },
+  "homepage": "https://github.com/Harshitha2866/FSD2-Harshitha-24B01A4580#readme"
 }
