@@ -1,2 +1,45 @@
-*.js
-node_modules/
+lab_programs/
+    annotations.js
+    arrow-functions.js
+    class-access_modifiers.js
+    class-constructor.js
+    datatypes-simple.js
+    functions-parameters-returntypes.js
+    generic_constraint.js 
+    generic_function.js
+    modules_config.js
+    modules_customer.js
+    modules_main.js
+    modules_order.js
+    namespaces.js 
+    readOnly_static.js 
+    specialtypes.js
+old/
+assignment_1/
+    app.js                                                                                                       
+    armstrong_num.js                                                                                             
+    bank_account.js                                                                                              
+    binary_to_decimal.js                                                                                         
+    character_frequency.js                                                                                       
+    decimal_to_binary.js                                                                                         
+    duplicate_elements.js                                                                                        
+    element_occurrences.js                                                                                       
+    employee_access_modifiers.js                                                                                 
+    gcd_lcm.js                                                                                                   
+    generic_box.js                                                                                               
+    math.js                                                                                                      
+    math_namespace.js                                                                                            
+    merge_arrays.js                                                                                              
+    missing_number.js                                                                                            
+    perfect_number.js                                                                                            
+    prime_number.js                                                                                              
+    prime_range.js                                                                                               
+    readonly_student.js                                                                                          
+    remove_duplicates.js                                                                                         
+    rotate_array.js                                                                                              
+    second_largest.js                                                                                            
+    static_college.js                                                                                            
+    strong_number.js                                                                                             
+    student_class.js                                                                                             
+    sumOfDigits.js
+/old   
