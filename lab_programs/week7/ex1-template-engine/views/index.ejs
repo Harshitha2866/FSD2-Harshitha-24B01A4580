@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Page title -->
+    <title><%= title %></title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+
+            /* Center the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Main registration box */
+        .container {
+            width: 450px;
+            padding: 40px;
+
+            background-color: white;
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+        /* Main heading */
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        /* Input boxes */
+        input {
+            width: 90%;
+            box-sizing: border-box;
+
+            padding: 14px;
+            margin-top: 8px;
+
+            font-size: 18px;
+        }
+
+        /* Register button */
+        button {
+            margin-top: 25px;
+            padding: 14px 35px;
+
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Error message */
+        .error {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Success message */
+        .success {
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <!-- Main heading -->
+        <h1><%= title %></h1>
+
+
+        <!-- Display error -->
+        <% if (error) { %>
+
+            <p class="error">
+                <%= error %>
+            </p>
+
+        <% } %>
+
+
+        <!-- Display success -->
+        <% if (student) { %>
+
+            <p class="success">
+                Welcome, <%= student %>!
+            </p>
+
+            <a href="/">Go Back</a>
+
+        <% } else { %>
+
+
+            <!-- Student registration form -->
+            <form action="/register" method="POST">
+
+                <!-- Student name -->
+                <label>Student Name:</label>
+
+                <input
+                    type="text"
+                    name="name"
+                >
+
+
+                <!-- Branch -->
+                <label>Branch:</label>
+
+                <input
+                    type="text"
+                    name="branch"
+                >
+
+
+                <!-- Register button -->
+                <button type="submit">
+                    Register
+                </button>
+
+            </form>
+
+
+        <% } %>
+
+    </div>
+
+</body>
+
+</html>

@@ -8,3 +8,9 @@ lab_programs/week4/**/*.js
 # Ignore .js files inside assignment_1
 assignment_1/*.js
 assignment_1/*/*.js
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore log files
+*.log
