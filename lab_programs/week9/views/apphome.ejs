@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --primary-hover: #5649c0;
+            --danger: #d63031;
+            --bg: #f5f6fa;
+            --text: #2e3436;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        input {
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input:focus {
+            border-color: var(--primary);
+        }
+        button[type="submit"] {
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: var(--primary-hover);
+        }
+        h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.2s;
+        }
+        li:hover {
+            background-color: #f8fafc;
+        }
+        .book-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .book-name {
+            font-weight: 600;
+            color: #334155;
+        }
+        .book-meta {
+            font-size: 12px;
+            color: #64748b;
+        }
+        .delete-btn {
+            padding: 6px 12px;
+            font-size: 13px;
+            color: var(--danger);
+            border: 1px solid var(--danger);
+            border-radius: 4px;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .delete-btn:hover {
+            background: var(--danger);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <h1>Library Management System</h1>
+        <form id="bookForm" class="form-group">
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Book Title"
+                required
+            >
+            <input
+                type="text"
+                id="author"
+                name="author"
+                placeholder="Author Name"
+                required
+            >
+            <input
+                type="number"
+                id="bookNumber"
+                name="bookNumber"
+                placeholder="Book Number"
+                required
+            >
+            <input
+                type="text"
+                id="category"
+                name="category"
+                placeholder="Book Category"
+                required
+            >
+            <button type="submit">
+                Add Book
+            </button>
+        </form>
+        <h3>Available Books</h3>
+        <ul id="bookList">
+            <% books.forEach(book => { %>
+                <li>
+                    <div class="book-info">
+                        <span class="book-name">
+                            <%= book.title %>
+                        </span>
+                        <span class="book-meta">
+                            <%= book.author %>
+                            •
+                            <%= book.category %>
+                            •
+                            ID: <%= book.bookNumber %>
+                        </span>
+                    </div>
+                    <button
+                        onclick="deleteBook('<%= book._id %>')"
+                        class="delete-btn">
+                        Delete
+                    </button>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</div>
+<script>
+    // Fetch Logic for CREATE
+    document
+        .getElementById('bookForm')
+        .addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const bookData = {
+                title:
+                    document.getElementById('title').value,
+                author:
+                    document.getElementById('author').value,
+                bookNumber:
+                    document.getElementById('bookNumber').value,
+                category:
+                    document.getElementById('category').value
+            };
+            const response = await fetch('/books', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(bookData)
+            });
+            if (response.ok) {
+                window.location.reload();
+            }
+        });
+    // Fetch Logic for DELETE
+    async function deleteBook(id) {
+        if (confirm("Remove this book record?")) {
+            const response =
+                await fetch(`/books/${id}`, {
+                    method: 'DELETE'
+                });
+            if (response.ok) {
+                window.location.reload();
+            }
+        }
+    }
+</script>
+</body>
+</html>
