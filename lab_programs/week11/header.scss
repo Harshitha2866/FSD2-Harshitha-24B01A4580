@@ -1,0 +1,10 @@
+$mainColor: purple;
+
+.header {
+  background: #f3f3f3;
+  padding: 10px;
+
+  h1 {
+    color: $mainColor;
+  }
+}

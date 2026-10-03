@@ -1,0 +1,20 @@
+{
+  "name": "week13",
+  "version": "1.0.0",
+  "description": "Week 13 React Hooks and Router",
+  "main": "main.jsx",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.9.6"
+  },
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}

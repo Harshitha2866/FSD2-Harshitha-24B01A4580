@@ -1,0 +1,21 @@
+.product {
+  padding: 20px;
+}
+
+.product h2 {
+  color: darkblue;
+}
+
+.product h3 {
+  color: purple;
+}
+
+.product button {
+  margin: 5px;
+  padding: 6px 10px;
+}
+
+.product input {
+  margin: 5px;
+  padding: 5px;
+}
